@@ -8,17 +8,24 @@
    }
 
   div {
-     background-color: #d3d3d3;
+     
      text-align:center;
-     margin: auto;
 }
-
+ div.serchBar {
+     background-color: white;
+     text-align:center;
+}
 nav {
 	font-family: 'DOSMyungjo';
 	text-align: center;
  	padding: 5px;
-  	background-color: #d3d3d3;
+
 }
+
+:focus-visible {
+    outline: 3px solid #aaa;
+}
+
 ul, h2 {
 
   display: inline-block;

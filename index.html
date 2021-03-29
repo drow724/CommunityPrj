@@ -8,21 +8,23 @@
 </head>
 <body>
 <header>
-<div style="border: 10px double; margin-top: 30px; margin-left: 60px; margin-right: 60px;">
+<div style="border: 10px double; margin-top: 30px; margin-left: 60px; margin-right: 60px; background-color: #d3d3d3;">
   <!--NAV-->
   <nav>
     <ul>
-      <li><a onclick="fetchPage('develope.html')">Develope</a></li>
-      <li><a onclick="fetchPage('music.html')">Music</a></li>
-      <li><a onclick="fetchPage('aboutMe.html')">About me</a></li>
-      <li><a onclick="fetchPage('daily.html')">Daily life</a></li>
+      <li><a onclick="fetchPage('Development.html')">Development</a></li>
+      <li><a onclick="fetchPage('openchat.html')">Music</a></li>
+      <li><a onclick="fetchPage('privatechat.html')">Daily Life</a></li>
+      <li><a onclick="fetchPage('rules.html')">About me</a></li>
     </ul> 
   </nav> 
   </div> 
 </header>
-<article>
-개인 <br>
+<div style="border: 10px double; margin-left: 60px; margin-right: 60px; background-color: #d3d3d3;">
+<article style="margin:auto">
+fetchPage('board.html')
 </article>
+</div>
 <script>
 function fetchPage(name){
 fetch(name).then(function(response){
