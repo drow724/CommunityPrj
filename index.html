@@ -11,22 +11,22 @@
 <div style="border: 10px double; margin-top: 30px; margin-left: 60px; margin-right: 60px; background-color: #dcdcdc;">
   <!--NAV-->
   <nav>
-    <ul>
-      <li style="cursor:pointer; focus:border=1px;"><a onclick="fetchPage('development.html')">Development</a></li>
-      <li style="cursor:pointer"><a onclick="fetchPage('social.html')">Social Media</a></li>
-      <li style="cursor:pointer"><a onclick="fetchPage('dailyLife.html')">Daily Life</a></li>
-      <li style="cursor:pointer"><a onclick="fetchPage('aboutMe.html')">About me</a></li>
-    </ul> 
+      <button class="button" style="cursor:pointer; font-size: 1em; padding: 20px 20px 20px 20px; font-size: 3em;" onclick="fetchPage('development.html')">Development</button>
+      <button class="button" style="cursor:pointer; font-size: 1em; padding: 20px 20px 20px 10px; font-size: 3em;" onclick="fetchPage('social.html')">Social Media</button>
+      <button class="button" style="cursor:pointer; font-size: 1em; padding: 20px 20px 20px 10px; font-size: 3em;" onclick="fetchPage('dailyLife.html')">Daily Life</button>
+      <button class="button" style="cursor:pointer; font-size: 1em; padding: 20px 10px 20px 20px; font-size: 3em;" onclick="fetchPage('aboutMe.html')">About me</button>
   </nav> 
   </div> 
 </header>
-<div style="border: 10px double; margin-left: 60px; margin-right: 60px; background-color: #d3d3d3; height: auto;">
+<div style="border: 10px double; margin-left: 60px; margin-right: 60px; margin-top: 30px;background-color: #d3d3d3; height: auto;">
 <article style="margin:auto; height: auto;">
 <h1 style="text-align: center">아직 공사중입니다ㅠㅠ</h1>
 <img src="image\cat.png" alt="catImages" class="catImage" style="float:center; display: block; margin: 0px auto; height: 500px;">
 </article>
 </div>
 <script>
+var tab1;
+
 function fetchPage(name){
 fetch(name).then(function(response){
 	response.text().then(function(text){
@@ -71,7 +71,58 @@ function dp_menu3(){
 
     }
 }
+function dp_tab1(){
+    let click1 = document.getElementById("onlink1");
+    let click2 = document.getElementById("onlink2");
+    let click3 = document.getElementById("onlink3");
+    if(click1.style.display === "block"){
+        click1.style.display = "none";
+        click2.style.display = "block";
+        click3.style.display = "block";
+    }
+}
+function dp_tab2(){
+    let click3 = document.getElementById("onlink3");
+    let click4 = document.getElementById("onlink4");
+    let click5 = document.getElementById("onlink5");
+    if(click3.style.display === "block"){
+        click3.style.display = "none";
+        click4.style.display = "block";
+        click5.style.display = "block";
+    }
+}
 
+function dp_tab_move1(){
+    let click2 = document.getElementById("onlink2");
+    let click = document.getElementById("onlink");
+    let click4 = document.getElementById("onlink4");
+    if(click2.style.background === "grey"){
+        click2.style.background = "white";
+        click.style.background= "grey";
+        click4.style.background= "grey";
+        this.tab1 = response.text();
+    }
+}
+function dp_tab_move2(){
+    let click = document.getElementById("onlink");
+    let click2 = document.getElementById("onlink2");
+    let click4 = document.getElementById("onlink4");
+    if(click.style.background === "grey"){
+        click.style.background = "white";
+        click2.style.background= "grey";
+        click4.style.background= "grey";
+    }
+}
+function dp_tab_move3(){
+    let click4 = document.getElementById("onlink4");
+    let click = document.getElementById("onlink");
+    let click2 = document.getElementById("onlink2");
+    if(click4.style.background === "grey"){
+        click4.style.background = "white";
+        click.style.background= "grey";
+        click2.style.background= "grey";
+    }
+}
 </script>
 </body>
 </html>
