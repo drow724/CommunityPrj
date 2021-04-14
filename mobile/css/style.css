@@ -206,7 +206,7 @@ div.index-board{
 	margin-right: 5%;
 	border: 10px double;
 	background-color: #d3d3d3;
-	height: 100vh;
+	height: auto;
 }
 
 div.index-article{
@@ -227,8 +227,11 @@ div.dev-bar{
 section.dev-sec{
 	border: 5px double;
 	width:auto;
-	height:100vh;
+	height:auto;
 	margin:1%;
 	background-color: white;
-	padding-top: 5%
+	padding-top: 15%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 15%;
 }
