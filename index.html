@@ -44,19 +44,32 @@ fetch(name).then(function(response){
 	 });
 }
 function fetchBoard(name){
+	var name1 = name;
+	var name1Array = name1.split('/')
+	
 	fetch(name).then(function(response){
 		response.text().then(function(text){
 			if(document.getElementById("sec1").style.display == "block"){
+				var adress = name;
 				document.getElementById("sec1").innerHTML = text;
+				document.getElementById("home1").innerHTML = name1Array[2];
+				document.getElementById("serchBar1").innerHTML = adress;
 			}
 			else if(document.getElementById("sec2").style.display == "block"){
+				var adress = name;
 				document.getElementById("sec2").innerHTML = text;
+				document.getElementById("home2").innerHTML = name1Array[2];
+				document.getElementById("serchBar2").innerHTML = adress;
 			}
 			else if(document.getElementById("sec3").style.display == "block"){
+				var adress = name;
 				document.getElementById("sec3").innerHTML = text;
+				document.getElementById("home3").innerHTML = name1Array[2];
+				document.getElementById("serchBar3").innerHTML = adress;
 			}
 		})
 		 });
+	
 	}
 function dp_menu1(){
     let click = document.getElementById("drop-content1");
@@ -123,7 +136,10 @@ function dp_tab_move1(){
     let click4 = document.getElementById("sec1");
     let click5 = document.getElementById("sec2");
     let click6 = document.getElementById("sec3");
-
+    let click7 = document.getElementById("serchBar1");
+    let click8 = document.getElementById("serchBar2");
+    let click9 = document.getElementById("serchBar3");
+    
     if(click1.style.background === "grey"){
         click1.style.background = "white";
         click2.style.background= "grey";
@@ -131,7 +147,9 @@ function dp_tab_move1(){
         click4.style.display = "none";
         click5.style.display= "block";
         click6.style.display= "none";
-
+        click7.style.display = "none";
+        click8.style.display= "block";
+        click9.style.display= "none";
     }
 }
 
@@ -142,7 +160,10 @@ function dp_tab_move2(){
     let click4 = document.getElementById("sec1");
     let click5 = document.getElementById("sec2");
     let click6 = document.getElementById("sec3");
-
+    let click7 = document.getElementById("serchBar1");
+    let click8 = document.getElementById("serchBar2");
+    let click9 = document.getElementById("serchBar3");
+    
     if(click1.style.background === "grey"){
         click1.style.background = "white";
         click2.style.background= "grey";
@@ -150,7 +171,9 @@ function dp_tab_move2(){
         click4.style.display = "block";
         click5.style.display= "none";
         click6.style.display= "none";
-
+        click7.style.display = "block";
+        click8.style.display= "none";
+        click9.style.display= "none";
     }
 }
 function dp_tab_move3(){
@@ -160,7 +183,10 @@ function dp_tab_move3(){
     let click4 = document.getElementById("sec1");
     let click5 = document.getElementById("sec2");
     let click6 = document.getElementById("sec3");
-
+    let click7 = document.getElementById("serchBar1");
+    let click8 = document.getElementById("serchBar2");
+    let click9 = document.getElementById("serchBar3");
+    
     if(click1.style.background === "grey"){
         click1.style.background = "white";
         click2.style.background= "grey";
@@ -168,6 +194,9 @@ function dp_tab_move3(){
         click4.style.display = "none";
         click5.style.display= "none";
         click6.style.display= "block";
+        click7.style.display = "none";
+        click8.style.display= "none";
+        click9.style.display= "block";
 
     }
 }
