@@ -52,7 +52,9 @@ function fetchBoard(name){
 			if(document.getElementById("sec1").style.display == "block"){
 				var adress = name;
 				document.getElementById("sec1").innerHTML = text;
-				document.getElementById("home1").innerHTML = name1Array[2];
+				document.getElementById("home1").innerHTML = name1Array[2],<button onclick="dp_del2()" id="x2" style=" border: none; background-color: #1fe0;height:auto; font-size: 0.8em; float:right;">
+   x
+	</button>;
 				document.getElementById("serchBar1").innerHTML = adress;
 			}
 			else if(document.getElementById("sec2").style.display == "block"){
