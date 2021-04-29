@@ -16,8 +16,14 @@
   </nav> 
   </div> 
 </header>
-<div id="index" style="border: 10px double; display:inline-block; margin-left: 150px; position:relative; margin-top: 250px;background-color: #d3d3d3; width:1600px; height: auto;">
+<div id="index" style="border: 10px double; display:inline-block; margin-left: 150px; position:relative; margin-top: 250px;background-color: #d3d3d3; width:1600px;">
 <article style="margin:auto; height: auto;">
+<div style="border: 10px double; height:250px; width:300px; display: inline-block;  background-color: white;  margin-left:300px; margin-top:100px; margin-bottom: 100px; ">
+<img src="image\cat.png" alt="catImages" class="catImage" style=" width:250px; display: block; margin-left:25px;">
+</div>
+<div style="border: 10px double; height:250px; width:700px; display: inline-block; position: absolute; background-color: white; text-align:center; margin-top:100px; margin-bottom: 100px; font-size: 2.0em; line-height: 80px;">
+안녕하세요?<br> 개발 공부를 하면서 배운 것, 느낌점 등을 <br> 정리하기 위해 만든 블로그입니다.
+</div>
 </article>
 </div>
 <script>
@@ -56,7 +62,10 @@ function fetchIndex(name){
 	if(click.style.height === "auto"){
 	    click.style.height = "1500px";
 		}
+	else{
+		click.style.height = "1500px";
 	}
+}
 function fetchBoard(name){
 	var name1 = name;
 	var name1Array = name1.split('/')
@@ -226,11 +235,13 @@ function dp_del1(){
         click2.style.display = "none";
         click3.style.display = "block";
         click4.style.display = "none";
+        fetchBoard('Board/latest.html');
         
     }
     if(click5.style.display === "block") {
     	click2.style.display = "none";
     	click6.style.display = "block";
+    	fetchBoard('Board/latest.html');
     }
 }
 function dp_del2(){
@@ -242,12 +253,14 @@ function dp_del2(){
     if(click1.style.float === "right"){
         click2.style.display = "none";
         click3.style.display = "block";
+        fetchBoard('Board/latest.html');
     }
     if(click5.style.display === "block"){
         click5.style.display = "none";
         click3.style.display = "none";
         click4.style.display = "block";
         click2.style.display = "none";
+        fetchBoard('Board/latest.html');
     }
 }
 function autoResize(i)
